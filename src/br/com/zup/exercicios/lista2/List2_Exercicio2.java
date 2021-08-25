@@ -18,12 +18,16 @@ public class List2_Exercicio2 {
         totalTinta = metros/tintaLitros;
         valorTotal = totalTinta * valorLitros;
 
-        System.out.println(Math.round(totalTinta) + " R$" + valorTotal);
+        System.out.println( (int)totalTinta + " R$" + valorTotal);
 
         metros = 30;
-        totalTinta = (metros/tintaGaloes/tintaLitros)/10;
+        float tintaMisturada;
 
-        System.out.println(totalTinta);
+        totalTinta = (metros - tintaLitros)/tintaGaloes;
+        valorTotal = valorTintaGaloes * totalTinta;
+        tintaMisturada = valorTotal + valorLitros;
+
+        System.out.println("Total de tintas: " + (int)totalTinta + " e o valor em dinheiro ficou: R$" + (int)tintaMisturada);
 
 
 
