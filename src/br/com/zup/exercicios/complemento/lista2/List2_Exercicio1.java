@@ -1,4 +1,4 @@
-package br.com.zup.exercicios.lista2;
+package br.com.zup.exercicios.complemento.lista2;
 
 public class List2_Exercicio1 {
 
