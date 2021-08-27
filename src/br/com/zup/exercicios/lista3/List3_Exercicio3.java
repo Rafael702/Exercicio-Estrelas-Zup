@@ -54,8 +54,6 @@ import java.util.Scanner;
                 System.out.println("Você é um Suspeito do crime.");
                 break;
             case 3: //3 ou 4
-                System.out.println("Você é cumplice do crime.");
-                break;
             case 4:
                 System.out.println("Você é cumplice do crime.");
                 break;
