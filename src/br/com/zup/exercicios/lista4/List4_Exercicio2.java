@@ -1,4 +1,6 @@
 package br.com.zup.exercicios.lista4;
+/***2 - Faça um programa que mostra na tela os números de 100 a 1.
+ **/
 
 public class List4_Exercicio2 {
     public static void main(String[] args){
@@ -10,5 +12,5 @@ public class List4_Exercicio2 {
             n--;
         }
 
-    }git
+    }
 }
