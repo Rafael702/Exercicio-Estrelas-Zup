@@ -36,7 +36,7 @@ public class List6_Exercicio2 {
             System.out.println("Valor inválido");
         }
 
-
+        sc.close();
 
 
 
