@@ -15,10 +15,10 @@ public class Aula7_Exemplo2 {
 //        System.out.println("Esta chave é do: " + contatos.get(1));
 
 //        Imprimindo chaves e valor no foreach
-        for(int referencia: contatos.keySet()){
-
-            System.out.println("Chave: " + referencia + "| valor: " + contatos.get(referencia));
-        }
+//        for(int referencia: contatos.keySet()){
+//
+//            System.out.println("Chave: " + referencia + "| valor: " + contatos.get(referencia));
+//        }
 
         System.out.println("\nContatos Dois: ");
         Map<String, String> contatos2 = new HashMap<String, String>();
