@@ -1,8 +1,6 @@
 package br.com.zup.exercicios.lista6;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 /**3 - Desenvolva um gerador de tabuada, capaz de gerar a tabuada de qualquer número inteiro entre 1 a 10.
  *  O usuário deve informar de qual número ele deseja ver a tabuada.
@@ -14,6 +12,7 @@ public class List6_Exercicio3 {
         Scanner sc = new Scanner(System.in);
 
         List<Integer>tabuada = new ArrayList<>();
+        Map<Integer, Integer>numero = new HashMap<Integer, Integer>();
 
         tabuada.add(1);
         tabuada.add(2);
@@ -32,13 +31,14 @@ public class List6_Exercicio3 {
 
         int calcTabuada = 0;
 
+        numero.put(1, valorTabuada);
 
-        System.out.println("Tabuada de " + valorTabuada + ":");
+        System.out.println("Tabuada de " + numero.get(1) + ":");
         for(int contador = 0; contador <= 9; contador++){
 
 
-            calcTabuada = valorTabuada * tabuada.get(contador);
-            System.out.println(valorTabuada + " x " + tabuada.get(contador) + " = " + calcTabuada);
+            calcTabuada = numero.get(1) * tabuada.get(contador);
+            System.out.println(numero.get(1) + " x " + tabuada.get(contador) + " = " + calcTabuada);
         }
 
 
