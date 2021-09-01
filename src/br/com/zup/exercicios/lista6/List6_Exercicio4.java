@@ -16,16 +16,17 @@ import java.util.Scanner;
         int numero = sc.nextInt();
 
         if(numero == 2){
-            System.out.println("O número " + numero + "é primo, pois só é divisível por um e ele mesmo.");
+            System.out.println("O número " + numero + " é primo, pois só é divisível por um e ele mesmo.");
         }else if(numero % 1 == 0 & numero % numero == 0){
                 if(numero % 3 ==0 | numero % 3 != 0) {
                   if(numero % 2 !=0){
                       System.out.println("Este número é primo.");
+                  }else{
+                      System.out.println("O número " + numero + " não é um número primo," +
+                              " pois, ele é par. " +
+                              "E os números primos são impares com a excessão do número 2.");
                   }
-                    }else{
-                    System.out.println("O número " + numero + " não é um número primo," +
-                            "pois, ele não é divisível por 3");
-                }
+                    }
             }
         }
 
