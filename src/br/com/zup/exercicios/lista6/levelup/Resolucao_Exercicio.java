@@ -49,7 +49,7 @@ public class Resolucao_Exercicio {
 
                     }
                 }
-
+                        alunos.remove(emailDeletado);
             }else if(opcao == 4){
                 chave = false;
             }else{
