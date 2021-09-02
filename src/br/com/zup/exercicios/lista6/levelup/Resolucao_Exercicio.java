@@ -19,6 +19,7 @@ public class Resolucao_Exercicio {
             System.out.println("Digite 1: Para cadastrar um aluno: ");
             System.out.println("Digite 2: Para exibir a lista: ");
             System.out.println("Digite 3: Para remover um aluno da lista, informe o email do aluno: ");
+            System.out.println("Digite 4: Para sair do Menu");
 
 
             if(opcao == 1){
@@ -42,13 +43,17 @@ public class Resolucao_Exercicio {
                 for (String emailAluno : alunos.keySet()){
                     if(emailAluno.equals(emailASerDeletado)){
                         System.out.println("Email deletado com Sucesso. ");
-                        alunos.remove(emailASerDeletado);
+                        //alunos.remove(emailASerDeletado);
+                        //break; Outra possibilidade
+                        emailDeletado = emailASerDeletado;
 
                     }
                 }
 
             }else if(opcao == 4){
-
+                chave = false;
+            }else{
+                System.out.println("Valor inválido,  insira um valor de acordo com o menu de opções.");
             }
 
         }
