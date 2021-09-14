@@ -30,6 +30,15 @@ public class Resolucao_Exercicio {
                 System.out.println("Por favor, digite o email do Aluno: ");
                 String email = sc.nextLine();
 
+                for(String verificarChave: alunos.keySet() ){
+                    if(verificarChave.equals(email)){
+                        System.out.println("Este email já foi cadastrado");
+                    }else{
+                        alunos.put(email, " Nome: " + nome + " Telefone: " + telefone);
+                        System.out.println("Usuário cadastrado com sucesso.");
+                    }
+                }
+
             } else if(opcao == 2){
                 for (String chaveAluno: alunos.keySet()) {
                     System.out.println("Contato: " + alunos.get(chaveAluno) + " Email: " + chaveAluno);

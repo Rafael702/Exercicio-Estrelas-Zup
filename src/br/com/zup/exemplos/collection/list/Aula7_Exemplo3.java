@@ -24,11 +24,11 @@ public class Aula7_Exemplo3 {
 
         }
 
-//        for (Double referencia: numeros) {
-//            System.out.println(referencia);
-//            }
-//
-//
+        for (Double referencia: numeros) {
+            System.out.println(referencia);
+            }
+
+
        }
 
 

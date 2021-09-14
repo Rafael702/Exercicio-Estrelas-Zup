@@ -1,12 +1,13 @@
-/**LEVEL UP
- Crie um programa para gerenciar uma lista de alunos, cada aluno tem nome,
- telefone e email. No final do programa deve ser exibido a lista de alunos cadastrados.
- Entrega Mínima: O sistema permite, via terminal, inserir pelo menos 1 aluno em uma lista
- e retornar o mesmo na tela.
- Entrega Média: O sistema permite adicionar mais de um aluno e apresenta um menu para decidir
- se deverá adicionar mais alunos ou encerrar o programa.
- Entrega Máxima: O Sistema permite excluir um aluno usando como parâmetro o email
- e não permite inserir um aluno com o email repetido.
+/**
+ * LEVEL UP
+ * Crie um programa para gerenciar uma lista de alunos, cada aluno tem nome,
+ * telefone e email. No final do programa deve ser exibido a lista de alunos cadastrados.
+ * Entrega Mínima: O sistema permite, via terminal, inserir pelo menos 1 aluno em uma lista
+ * e retornar o mesmo na tela.
+ * Entrega Média: O sistema permite adicionar mais de um aluno e apresenta um menu para decidir
+ * se deverá adicionar mais alunos ou encerrar o programa.
+ * Entrega Máxima: O Sistema permite excluir um aluno usando como parâmetro o email
+ * e não permite inserir um aluno com o email repetido.
  **/
 package br.com.zup.exercicios.lista6;
 
@@ -24,37 +25,42 @@ public class List6_LevelUp {
         String emailAluno;
 
 
-        Map<String,String> alunos = new HashMap<String,String>();
+        Map<String, String> alunos = new HashMap<String, String>();
 
         String todosEmails;
+        String telefoneAluno;
 
-        do{
+        do {
             System.out.println("Digite o nome do Aluno: ");
             nomeAluno = sc.next();
+
+            System.out.println("Digite o numero do seu telefone: ");
+            telefoneAluno = sc.next();
 
             System.out.println("Digite o e-mail do Aluno: ");
             emailAluno = sc.next();
 
-            if(sair == 3){
-                alunos.put(emailAluno, nomeAluno);
-            }else if(sair == 0){
-             if(alunos.containsKey(emailAluno)) {
-                 System.out.println("Aluno não cadastrado");
-             }else {
-                 todosEmails = emailAluno;
-                 alunos.put(emailAluno, nomeAluno);
-             }
+
+            if (sair == 3) {
+                alunos.put("Email: " + emailAluno, "| Nome do Aluno: " + nomeAluno + "\nTelefone: " + telefoneAluno);
+            } else if (sair == 0) {
+                if (alunos.containsKey(emailAluno)) {
+                    System.out.println("Aluno não cadastrado");
+                } else {
+                    todosEmails = emailAluno;
+                    alunos.put("Email: " + emailAluno, "| Nome do Aluno: " + nomeAluno + "\nTelefone: " + telefoneAluno);
+                }
             }
 
             System.out.println("Deseja sair do Programa? Digite: 3. " +
                     "Para continuar cadastrando alunos, digite: 0");
             sair = sc.nextInt();
 
-        }while (sair !=3);
+        } while (sair != 3);
 
         System.out.println("Lista de Alunos cadastrados: ");
-        for (String referencia: alunos.keySet()) {
-          System.out.println("Nome do Aluno: " + alunos.get(referencia) + " | E-mail: " + referencia);
+        for (String referencia : alunos.keySet()) {
+            System.out.println(referencia + alunos.get(referencia));
         }
 
         System.out.println("----------------------------------------------------------------------------");
@@ -62,8 +68,8 @@ public class List6_LevelUp {
         System.out.println("Digite: 0 - Sim ou 3 - Não: ");
         sair = sc.nextInt();
 
-        if(sair !=3){
-            do{
+        if (sair != 3) {
+            do {
                 System.out.println("Exclusão de Alunos do Sistema: ");
 
                 System.out.println("Digite o e-mail do Aluno: ");
@@ -75,10 +81,10 @@ public class List6_LevelUp {
                         "Para continuar cadastrando alunos, digite: 0");
                 sair = sc.nextInt();
 
-            }while (sair !=3);
+            } while (sair != 3);
         }
 
-        for (String referencia: alunos.keySet()) {
+        for (String referencia : alunos.keySet()) {
             System.out.println("Nome do Aluno: " + alunos.get(referencia) + " | E-mail: " + referencia);
         }
     }

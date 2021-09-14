@@ -27,7 +27,7 @@ public class Aquecimento_List_Exercicio1 {
             System.out.println("Escolha umas das opções abaixo: ");
             System.out.println("Digite 1: Para adicionar um produto.");
             System.out.println("Digite 2: Para ver a lista de produtos adicionados.");
-            System.out.println("Digite 3: Para excluir um produto da lista.");
+            System.out.println("Digite 3: Para excluir produtos da lista.");
             System.out.println("Digite 4: Para sair do programa.");
             opcao = sc.nextInt();
 
@@ -39,6 +39,7 @@ public class Aquecimento_List_Exercicio1 {
                 valorProduto = sc.next();
 
                 produtos.put(nomeProduto, " Valor do produto: R$" + valorProduto);
+                System.out.println("Produto cadastrado com sucesso!!!");
             } else if (opcao == 2) {
                 System.out.println("Estes produtos estão na Prateleira: ");
                 System.out.println("----------------------------------------------------------------------------");
@@ -65,6 +66,12 @@ public class Aquecimento_List_Exercicio1 {
 
 
         }
+
+        System.out.println("-------------------------------------------------------------");
+        System.out.println("-----------------------Fim do Programa-----------------------");
+        System.out.println("---------------------Agradeço por usar!!!!!------------------");
+        System.out.println("-------------------------------------------------------------");
+
 
     }
 }
